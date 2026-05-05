@@ -51,7 +51,7 @@ export default function App() {
           </h2>
 
           <p className="text-gray-400 mt-4">
-            Developer • Cybersecurity • Embedded Systems • Web
+            Tech Student • Embedded Systems • Web
           </p>
         </div>
 
@@ -65,7 +65,7 @@ export default function App() {
 
         {/* PROJECTS */}
         <div className="mt-10">
-          <h3 className="text-xl text-purple-300 mb-8 tracking-widest">
+          <h3 className="text-xl text-cyan-300 mb-8 tracking-widest">
             / system_modules
           </h3>
 
