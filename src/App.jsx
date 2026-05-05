@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-const [activeProject, setActiveProject] = useState(null)
+
 export default function App() {
   const [text, setText] = useState("")
 
