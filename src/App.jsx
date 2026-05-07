@@ -4,43 +4,110 @@ export default function App() {
   const [active, setActive] = useState(null)
 
   return (
-    <div style={{ background: "#050507", minHeight: "100vh", color: "white", padding: "40px", fontFamily: "monospace" }}>
+    <div className="app">
 
-      <h1 style={{ fontSize: "40px", color: "#a78bfa" }}>
-        Hikma Ibrahim
-      </h1>
+      {/* GRID */}
+      <div className="grid-bg"></div>
 
-      <h2 style={{ fontSize: "24px", color: "#22d3ee", marginBottom: "20px" }}>
-        VeilStack
-      </h2>
+      {/* GLOW */}
+      <div className="purple-glow"></div>
+      <div className="cyan-glow"></div>
 
-      <p style={{ color: "#888", marginBottom: "40px" }}>
-        Developer • Cybersecurity • Embedded Systems • Web
-      </p>
+      {/* CONTENT */}
+      <div className="content">
 
-      <h3 style={{ color: "#a78bfa", marginBottom: "10px" }}>
-        / system_modules
-      </h3>
+        {/* HERO */}
+        <div className="hero">
+          <h1>Hikma Ibrahim</h1>
+          <h2>VeilStack</h2>
 
-      {/* PROJECT */}
-      <div
-        onClick={() => setActive(active === "email" ? null : "email")}
-        style={{
-          border: "1px solid #444",
-          padding: "15px",
-          marginBottom: "10px",
-          cursor: "pointer"
-        }}
-      >
-        Email Spam Classifier
+          <p>
+            Developer • Cybersecurity • Embedded Systems • Web
+          </p>
+        </div>
 
-        {active === "email" && (
-          <div style={{ marginTop: "10px", color: "#ccc" }}>
-            ML-based spam detection system.
+        {/* TERMINAL */}
+        <div className="terminal">
+          <pre>
+{`> whoami
+
+Hikma Ibrahim
+VeilStack
+
+Building secure and meaningful technology`}
+          </pre>
+        </div>
+
+        {/* PROJECTS */}
+        <div className="projects">
+
+          <h3>/ system_modules</h3>
+
+          {/* PROJECT */}
+          <div
+            className="project-card purple"
+            onClick={() =>
+              setActive(active === "email" ? null : "email")
+            }
+          >
+            <div className="project-top">
+              <div>
+                <h4>🔐 Email Spam Classifier</h4>
+                <p>ML Security Module</p>
+              </div>
+
+              <span>Python</span>
+            </div>
+
+            {active === "email" && (
+              <div className="project-expanded">
+                <p>
+                  Machine learning system that detects spam emails
+                  using NLP techniques.
+                </p>
+
+                <div className="tags">
+                  <span>Python</span>
+                  <span>Scikit-learn</span>
+                  <span>NLP</span>
+                </div>
+              </div>
+            )}
           </div>
-        )}
-      </div>
 
+          {/* PROJECT */}
+          <div
+            className="project-card cyan"
+            onClick={() =>
+              setActive(active === "food" ? null : "food")
+            }
+          >
+            <div className="project-top">
+              <div>
+                <h4>🍔 Food Delivery App</h4>
+                <p>Full-stack System</p>
+              </div>
+
+              <span>React</span>
+            </div>
+
+            {active === "food" && (
+              <div className="project-expanded">
+                <p>
+                  Food ordering platform with backend integration.
+                </p>
+
+                <div className="tags">
+                  <span>React</span>
+                  <span>Node</span>
+                  <span>MySQL</span>
+                </div>
+              </div>
+            )}
+          </div>
+
+        </div>
+      </div>
     </div>
   )
 }
