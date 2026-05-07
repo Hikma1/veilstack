@@ -59,3 +59,10 @@ body {
   max-width: 1000px;
   margin: auto;
 }
+/* HERO */
+
+.hero h1 {
+  font-size: 64px;
+  color: #c084fc;
+  margin-bottom: 10px;
+}
