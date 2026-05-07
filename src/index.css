@@ -29,3 +29,14 @@ body {
 
   z-index: 0;
 }
+/* GLOWS */
+
+.purple-glow,
+.cyan-glow {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 999px;
+  filter: blur(120px);
+  z-index: 0;
+}
