@@ -9,3 +9,9 @@ body {
   font-family: monospace;
   overflow-x: hidden;
 }
+.app {
+  min-height: 100vh;
+  position: relative;
+  padding: 60px 20px;
+  overflow: hidden;
+}
