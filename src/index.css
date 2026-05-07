@@ -40,3 +40,14 @@ body {
   filter: blur(120px);
   z-index: 0;
 }
+.purple-glow {
+  background: rgba(124, 58, 237, 0.3);
+  top: -100px;
+  left: -100px;
+}
+
+.cyan-glow {
+  background: rgba(34, 211, 238, 0.25);
+  bottom: -100px;
+  right: -100px;
+}
