@@ -51,3 +51,11 @@ body {
   bottom: -100px;
   right: -100px;
 }
+/* CONTENT */
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: auto;
+}
