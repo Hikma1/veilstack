@@ -1,75 +1,42 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 export default function App() {
-  const [text, setText] = useState("")
-  const [activeProject, setActiveProject] = useState(null)
-
-  const fullText =
-    "> whoami\n\nHikma Ibrahim\nVeilStack\nDeveloper | Cybersecurity | Embedded Systems | Web\n\nBuilding secure and meaningful technology"
-
-  useEffect(() => {
-    let i = 0
-    const interval = setInterval(() => {
-      setText(fullText.slice(0, i))
-      i++
-      if (i > fullText.length) clearInterval(interval)
-    }, 30)
-
-    return () => clearInterval(interval)
-  }, [])
-
-  const toggleProject = (id) => {
-    setActiveProject(activeProject === id ? null : id)
-  }
+  const [active, setActive] = useState(null)
 
   return (
-    <div className="min-h-screen bg-black text-white p-6 font-mono">
+    <div style={{ background: "#050507", minHeight: "100vh", color: "white", padding: "40px", fontFamily: "monospace" }}>
 
-      {/* HEADER */}
-      <h1 className="text-4xl text-purple-400 font-bold mb-2">
+      <h1 style={{ fontSize: "40px", color: "#a78bfa" }}>
         Hikma Ibrahim
       </h1>
-      <h2 className="text-2xl text-cyan-400 mb-6">
+
+      <h2 style={{ fontSize: "24px", color: "#22d3ee", marginBottom: "20px" }}>
         VeilStack
       </h2>
 
-      {/* TERMINAL */}
-      <div className="border border-purple-500 p-4 mb-10">
-        <pre>
-          {text}
-          <span>▍</span>
-        </pre>
-      </div>
+      <p style={{ color: "#888", marginBottom: "40px" }}>
+        Developer • Cybersecurity • Embedded Systems • Web
+      </p>
 
-      {/* PROJECTS */}
-      <h3 className="text-purple-400 mb-4">/ system_modules</h3>
+      <h3 style={{ color: "#a78bfa", marginBottom: "10px" }}>
+        / system_modules
+      </h3>
 
-      {/* PROJECT 1 */}
-      <div onClick={() => toggleProject("email")} className="border p-4 mb-4 cursor-pointer">
-        <p>Email Spam Classifier</p>
+      {/* PROJECT */}
+      <div
+        onClick={() => setActive(active === "email" ? null : "email")}
+        style={{
+          border: "1px solid #444",
+          padding: "15px",
+          marginBottom: "10px",
+          cursor: "pointer"
+        }}
+      >
+        Email Spam Classifier
 
-        {activeProject === "email" && (
-          <div className="mt-3 text-sm">
-            <p>ML-based spam detection system.</p>
-            <a
-              href="https://github.com/Hikma1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-400 underline"
-            >
-              GitHub
-            </a>
-          </div>
-        )}
-      </div>
-
-      {/* PROJECT 2 */}
-      <div onClick={() => toggleProject("food")} className="border p-4 mb-4 cursor-pointer">
-        <p>Food Delivery App</p>
-
-        {activeProject === "food" && (
-          <div className="mt-3 text-sm">
-            <p>Full-stack food ordering system.</p>
+        {active === "email" && (
+          <div style={{ marginTop: "10px", color: "#ccc" }}>
+            ML-based spam detection system.
           </div>
         )}
       </div>
