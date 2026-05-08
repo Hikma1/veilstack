@@ -75,3 +75,13 @@ body {
   color: #888;
   margin-bottom: 50px;
 }
+/* TERMINAL */
+
+.terminal {
+  background: rgba(0,0,0,0.5);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  padding: 30px;
+  border-radius: 16px;
+  margin-bottom: 60px;
+  backdrop-filter: blur(10px);
+}
