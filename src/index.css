@@ -85,3 +85,14 @@ body {
   margin-bottom: 60px;
   backdrop-filter: blur(10px);
 }
+.terminal pre {
+  color: #ddd6fe;
+  line-height: 1.8;
+}
+/* PROJECTS */
+
+.projects h3 {
+  color: #c084fc;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
