@@ -102,3 +102,9 @@ body {
 .project-card.purple {
   border-color: rgba(124, 58, 237, 0.3);
 }
+.project-card.cyan {
+  border-color: rgba(34, 211, 238, 0.3);
+}
+.project-card.purple:hover {
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.4);
+}
