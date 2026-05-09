@@ -111,3 +111,8 @@ body {
 .project-card.cyan:hover {
   box-shadow: 0 0 30px rgba(34, 211, 238, 0.4);
 }
+.project-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
