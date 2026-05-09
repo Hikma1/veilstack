@@ -108,3 +108,6 @@ body {
 .project-card.purple:hover {
   box-shadow: 0 0 30px rgba(124, 58, 237, 0.4);
 }
+.project-card.cyan:hover {
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.4);
+}
