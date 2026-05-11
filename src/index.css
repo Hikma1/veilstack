@@ -138,4 +138,7 @@ body {
   gap: 10px;
     margin-top: 15px;
 }
-.tags span {}
+.tags span {
+   background: rgba(255,255,255,0.08);
+  padding: 6px 12px;
+}
