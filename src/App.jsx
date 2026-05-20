@@ -14,3 +14,10 @@ useEffect(() => {
           el.classList.add("active")
         }
       })
+ window.addEventListener("scroll", revealOnScroll)
+
+    revealOnScroll()
+
+    return () =>
+      window.removeEventListener("scroll", revealOnScroll)
+  }, [])
