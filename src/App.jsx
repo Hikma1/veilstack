@@ -108,7 +108,30 @@ Cybersecurity • Embedded Systems • Web Development`}
 
           </div>
         </div>
+  {/* SKILLS */}
+<div className="skills reveal">
 
+  <h3>/ tech_stack</h3>
+
+  <div className="skills-grid">
+
+    <div className="skill purple">Python</div>
+    <div className="skill cyan">React</div>
+    <div className="skill fuchsia">Node.js</div>
+    <div className="skill yellow">Cybersecurity</div>
+
+    <div className="skill purple">JavaScript</div>
+    <div className="skill cyan">MySQL</div>
+    <div className="skill fuchsia">Arduino</div>
+    <div className="skill yellow">Embedded Systems</div>
+
+    <div className="skill purple">Git</div>
+    <div className="skill cyan">Tailwind</div>
+    <div className="skill fuchsia">HTML/CSS</div>
+    <div className="skill yellow">Java</div>
+
+  </div>
+</div>
         {/* PROJECTS */}
         <div className="projects reveal">
 
