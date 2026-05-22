@@ -191,3 +191,10 @@ body {
 .skill.cyan:hover {
   box-shadow: 0 0 25px rgba(34,211,238,0.5);
 }
+.skill.fuchsia {
+  border-color: rgba(217,70,239,0.3);
+}
+
+.skill.fuchsia:hover {
+  box-shadow: 0 0 25px rgba(217,70,239,0.5);
+}
