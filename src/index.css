@@ -198,3 +198,10 @@ body {
 .skill.fuchsia:hover {
   box-shadow: 0 0 25px rgba(217,70,239,0.5);
 }
+.skill.yellow {
+  border-color: rgba(234,179,8,0.3);
+}
+
+.skill.yellow:hover {
+  box-shadow: 0 0 25px rgba(234,179,8,0.5);
+}
