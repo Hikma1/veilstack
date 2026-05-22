@@ -172,3 +172,22 @@ body {
   border: 1px solid transparent;
   backdrop-filter: blur(8px);
 }
+.skill:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+
+.skill.purple {
+  border-color: rgba(124,58,237,0.3);
+}
+
+.skill.purple:hover {
+  box-shadow: 0 0 25px rgba(124,58,237,0.5);
+}
+
+.skill.cyan {
+  border-color: rgba(34,211,238,0.3);
+}
+
+.skill.cyan:hover {
+  box-shadow: 0 0 25px rgba(34,211,238,0.5);
+}
