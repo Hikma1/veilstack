@@ -144,3 +144,67 @@ body {
    border-radius: 999px;
   font-size: 12px;
 }
+/* SKILLS */
+
+.skills {
+  margin-bottom: 80px;
+}
+
+.skills h3 {
+  color: #c084fc;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.skill {
+  padding: 20px;
+  border-radius: 18px;
+  background: rgba(0,0,0,0.45);
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px solid transparent;
+  backdrop-filter: blur(8px);
+}
+
+.skill:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+
+.skill.purple {
+  border-color: rgba(124,58,237,0.3);
+}
+
+.skill.purple:hover {
+  box-shadow: 0 0 25px rgba(124,58,237,0.5);
+}
+
+.skill.cyan {
+  border-color: rgba(34,211,238,0.3);
+}
+
+.skill.cyan:hover {
+  box-shadow: 0 0 25px rgba(34,211,238,0.5);
+}
+
+.skill.fuchsia {
+  border-color: rgba(217,70,239,0.3);
+}
+
+.skill.fuchsia:hover {
+  box-shadow: 0 0 25px rgba(217,70,239,0.5);
+}
+
+.skill.yellow {
+  border-color: rgba(234,179,8,0.3);
+}
+
+.skill.yellow:hover {
+  box-shadow: 0 0 25px rgba(234,179,8,0.5);
+}
