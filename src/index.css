@@ -144,3 +144,31 @@ body {
    border-radius: 999px;
   font-size: 12px;
 }
+/* SKILLS */
+
+.skills {
+  margin-bottom: 80px;
+}
+
+.skills h3 {
+  color: #c084fc;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.skill {
+  padding: 20px;
+  border-radius: 18px;
+  background: rgba(0,0,0,0.45);
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px solid transparent;
+  backdrop-filter: blur(8px);
+}
