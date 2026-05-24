@@ -240,3 +240,20 @@ body {
   .project-card {
     padding: 20px;
   }
+   .contact-terminal h3,
+  .projects h3,
+  .skills h3,
+  .about h3 {
+    font-size: 20px;
+  }
+
+  .terminal-window {
+    padding: 20px;
+  }
+
+  .links a {
+    font-size: 14px;
+    word-break: break-word;
+  }
+
+}
