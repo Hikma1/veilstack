@@ -223,3 +223,11 @@ body {
   .terminal {
     padding: 20px;
   }
+   .terminal pre {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
