@@ -212,3 +212,14 @@ body {
   .app {
     padding: 30px 16px;
   }
+.hero h2 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .terminal {
+    padding: 20px;
+  }
