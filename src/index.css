@@ -205,3 +205,10 @@ body {
 .skill.yellow:hover {
   box-shadow: 0 0 25px rgba(234,179,8,0.5);
 }
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .app {
+    padding: 30px 16px;
+  }
