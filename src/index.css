@@ -231,3 +231,12 @@ body {
   .skills-grid {
     grid-template-columns: 1fr;
   }
+  .project-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
