@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react"
-import { useEffect, useState } from "react"
 import "./index.css"
 
 export default function App() {
   const [active, setActive] = useState(null)
+
+  // CURSOR GLOW POSITION
+  const [position, setPosition] = useState({
+    x: 0,
+    y: 0,
+  })
 
   // SCROLL REVEAL
   useEffect(() => {
@@ -28,8 +33,32 @@ export default function App() {
       window.removeEventListener("scroll", revealOnScroll)
   }, [])
 
+  // CURSOR GLOW EFFECT
+  useEffect(() => {
+    const moveCursor = (e) => {
+      setPosition({
+        x: e.clientX,
+        y: e.clientY,
+      })
+    }
+
+    window.addEventListener("mousemove", moveCursor)
+
+    return () =>
+      window.removeEventListener("mousemove", moveCursor)
+  }, [])
+
   return (
     <div className="app">
+
+      {/* CURSOR GLOW */}
+      <div
+        className="cursor-glow"
+        style={{
+          left: `${position.x}px`,
+          top: `${position.y}px`,
+        }}
+      ></div>
 
       {/* GRID BACKGROUND */}
       <div className="grid-bg"></div>
@@ -109,30 +138,32 @@ Cybersecurity • Embedded Systems • Web Development`}
 
           </div>
         </div>
-  {/* SKILLS */}
-<div className="skills reveal">
 
-  <h3>/ tech_stack</h3>
+        {/* SKILLS */}
+        <div className="skills reveal">
 
-  <div className="skills-grid">
+          <h3>/ tech_stack</h3>
 
-    <div className="skill purple">Python</div>
-    <div className="skill cyan">React</div>
-    <div className="skill fuchsia">Node.js</div>
-    <div className="skill yellow">Cybersecurity</div>
+          <div className="skills-grid">
 
-    <div className="skill purple">JavaScript</div>
-    <div className="skill cyan">MySQL</div>
-    <div className="skill fuchsia">Arduino</div>
-    <div className="skill yellow">Embedded Systems</div>
+            <div className="skill purple">Python</div>
+            <div className="skill cyan">React</div>
+            <div className="skill fuchsia">Node.js</div>
+            <div className="skill yellow">Cybersecurity</div>
 
-    <div className="skill purple">Git</div>
-    <div className="skill cyan">Tailwind</div>
-    <div className="skill fuchsia">HTML/CSS</div>
-    <div className="skill yellow">Java</div>
+            <div className="skill purple">JavaScript</div>
+            <div className="skill cyan">MySQL</div>
+            <div className="skill fuchsia">Arduino</div>
+            <div className="skill yellow">Embedded Systems</div>
 
-  </div>
-</div>
+            <div className="skill purple">Git</div>
+            <div className="skill cyan">Tailwind</div>
+            <div className="skill fuchsia">HTML/CSS</div>
+            <div className="skill yellow">Java</div>
+
+          </div>
+        </div>
+
         {/* PROJECTS */}
         <div className="projects reveal">
 
@@ -367,7 +398,9 @@ Cybersecurity • Embedded Systems • Web Development`}
               </a>
 
             </div>
+
           </div>
+
         </div>
 
       </div>
