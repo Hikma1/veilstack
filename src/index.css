@@ -269,3 +269,15 @@ body {
     rgba(34,211,238,0.12) 35%,
     transparent 70%
   );
+    border-radius: 999px;
+
+  pointer-events: none;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 0;
+
+  transition:
+    left 0.08s linear,
+    top 0.08s linear;
+}
