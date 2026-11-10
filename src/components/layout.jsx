@@ -1,34 +1,49 @@
-import { NavLink, Outlet } from 'react-router-dom'
-
-const links = [
-  { to: '/projects', label: 'Projects' },
-  { to: '/core', label: 'The core' },
-  { to: '/contact', label: 'Contact' },
+const layers = [
+  {
+    label: 'LAYER 01 · SURFACE',
+    box: 'left-0 top-0 bg-layer-1 border-line text-muted',
+    move: 'group-hover:translate-y-0',
+  },
+  {
+    label: 'LAYER 02 · PROJECTS',
+    box: 'left-[30px] top-[70px] bg-layer-2 border-line text-text/80',
+    move: 'group-hover:translate-y-[14px]',
+  },
+  {
+    label: 'LAYER 03 · CRAFT',
+    box: 'left-[60px] top-[140px] bg-layer-3 border-[#4a5382] text-text/90',
+    move: 'group-hover:translate-y-[28px]',
+  },
+  {
+    label: 'LAYER 04 · THE CORE',
+    box: 'left-[90px] top-[210px] bg-amber border-amber text-ink font-medium',
+    move: 'group-hover:translate-y-[42px]',
+    arabic: true,
+  },
 ]
 
-export default function Layout() {
+export default function LayerStack() {
   return (
-    <div className="min-h-screen flex flex-col px-6 md:px-16">
-      <header className="h-20 flex items-center justify-between">
-        <NavLink to="/" className="font-mono text-sm text-amber">VEILSTACK</NavLink>
-        <nav className="flex gap-8 text-sm">
-          {links.map((l) => (
-            <NavLink
-              key={l.to}
-              to={l.to}
-              className={({ isActive }) =>
-                isActive ? 'text-text' : 'text-muted hover:text-text transition-colors'
-              }
+    <div className="group relative w-[440px] h-[440px] max-w-full">
+      {layers.map((l) => (
+        <div
+          key={l.label}
+          className={`absolute w-[340px] h-[200px] rounded-2xl border p-[18px] font-mono text-xs
+            transition-transform duration-500 ease-out motion-reduce:transition-none
+            ${l.box} ${l.move}`}
+        >
+          {l.label}
+          {l.arabic && (
+            <p
+              lang="ar"
+              dir="rtl"
+              className="font-arabic font-bold text-center text-[92px] leading-[1.1] mt-6"
             >
-              {l.label}
-            </NavLink>
-          ))}
-        </nav>
-      </header>
-      <main className="flex-1">
-        <Outlet />
-      </main>
-      <footer className="py-8 font-mono text-xs text-muted">© Hikma Ibrahim</footer>
+              حكمة
+            </p>
+          )}
+        </div>
+      ))}
     </div>
   )
 }
