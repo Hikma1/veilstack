@@ -9,4 +9,9 @@
   --color-text: #eceff6;
   --color-muted: #a7afc2;
   --color-amber: #f5b94c;
+
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-arabic: "Aref Ruqaa", serif;
 }
