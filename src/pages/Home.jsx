@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom'
 import LayerStack from '../components/LayerStack'
 
+import Typewriter from '../components/Typewriter'
+import Marquee from '../components/Marquee'
+
+const focus = ['back-end systems', 'AI models', 'blockchain']
 const chapters = ['00 Surface', '01 Projects', '02 Craft', '03 The core', '04 Contact']
 
 export default function Home() {
