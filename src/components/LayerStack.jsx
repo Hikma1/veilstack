@@ -24,6 +24,9 @@ const layers = [
 
 export default function LayerStack() {
   return (
+    <div className="absolute inset-0 animate-float">
+  <div ref={tilt} className="absolute inset-0 transition-transform duration-200 ease-out">
+
     <div className="group relative w-[440px] h-[440px] max-w-full">
       {layers.map((l) => (
         <div
@@ -45,5 +48,6 @@ export default function LayerStack() {
         </div>
       ))}
     </div>
+    
   )
 }
