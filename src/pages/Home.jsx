@@ -25,10 +25,9 @@ export default function Home() {
           <h1 className="font-serif text-5xl md:text-7xl leading-[1.05] tracking-tight mt-5">
             I build what lives <em className="text-amber">beneath</em> the surface.
           </h1>
-          <p className="text-lg text-muted leading-relaxed max-w-lg mt-6">
-            I'm Hikma Ibrahim, a computer science student at Addis Ababa University.
-            This is my work, one layer at a time.
-          </p>
+          <p style={delay(300)} className="animate-rise font-mono text-sm text-muted mt-5">
+  Exploring: <Typewriter words={focus} className="text-amber" />
+</p>
           <div className="flex gap-3 mt-8">
             <Link to="/projects" className="px-6 py-3.5 bg-amber text-ink rounded-xl font-semibold">
               Begin the story →
