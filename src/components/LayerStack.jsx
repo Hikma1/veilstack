@@ -44,8 +44,8 @@ export default function LayerStack() {
                 translate: `0 ${spread ? i * 14 : 0}px`,
                 animationDelay: `${300 + i * 150}ms`,
               }}
-              className={`absolute w-[340px] h-[200px] rounded-2xl border p-[18px] font-mono text-xs
-                animate-rise transition-transform duration-500 ease-out ${l.box}`}
+             className={`absolute w-85 h-50 rounded-2xl border p-4.5 font-mono text-xs
+  animate-rise transition-transform duration-500 ease-out ${l.box}`}
             >
               {l.label}
               {l.arabic && (
