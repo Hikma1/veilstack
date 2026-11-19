@@ -28,7 +28,7 @@ export default function LayerStack() {
 
   return (
     <div
-      className="relative w-[440px] h-[440px] max-w-full"
+      className="relative w-110 h-110 max-w-full"
       onPointerDown={(e) => { lastPointer.current = e.pointerType }}
       onPointerEnter={(e) => e.pointerType === 'mouse' && setSpread(true)}
       onPointerLeave={(e) => { if (e.pointerType === 'mouse') setSpread(false); reset() }}
