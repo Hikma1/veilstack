@@ -37,12 +37,21 @@ export default function Home() {
             Exploring: <Typewriter words={focus} className="text-amber" />
           </p>
           <div style={delay(360)} className="animate-rise flex gap-3 mt-8">
-            <Link to="/projects" className="px-6 py-3.5 bg-amber text-ink rounded-xl font-semibold">
-              Begin the story →
-            </Link>
-            <Link to="/projects" className="px-6 py-3.5 border border-line rounded-xl">
-              Skip to projects
-            </Link>
+            <Link
+  to="/projects"
+  className="group px-6 py-3.5 bg-amber text-ink rounded-xl font-semibold transition duration-300
+    hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(245,185,76,0.3)]"
+>
+  Begin the story{' '}
+  <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+</Link>
+<Link
+  to="/projects"
+  className="px-6 py-3.5 border border-line rounded-xl transition duration-300
+    hover:border-amber hover:text-amber"
+>
+  Skip to projects
+</Link>
           </div>
         </div>
         <LayerStack />
