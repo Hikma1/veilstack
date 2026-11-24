@@ -8,3 +8,8 @@ export default function Divider() {
         <span lang="ar" dir="rtl" className="font-arabic text-3xl font-bold text-amber">
           حكمة
         </span>
+         <span className="h-px flex-1 bg-linear-to-l from-transparent to-line" />
+      </div>
+    </Reveal>
+  )
+}
