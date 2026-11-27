@@ -4,6 +4,7 @@ import { contact } from '../data/profile'
 
 import Divider from './Divider'
 import BackToTop from './BackToTop'
+import CursorGlow from './CursorGlow'
 
 const links = [
   { to: '/projects', label: 'Projects' },
@@ -25,6 +26,8 @@ export default function Layout() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <CursorGlow />
+
       <header className="sticky top-0 z-40 border-b border-layer-3/60 bg-ink/70 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 md:px-10">
           <NavLink
@@ -77,6 +80,8 @@ export default function Layout() {
         <Outlet />
       </main>
 
+      <Divider />
+
       <footer className="border-t border-layer-3/60">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-8 font-mono text-xs text-muted md:flex-row md:items-center md:justify-between md:px-10">
           <span>© Hikma Ibrahim</span>
@@ -90,6 +95,8 @@ export default function Layout() {
           </a>
         </div>
       </footer>
+
+      <BackToTop />
     </div>
   )
 }
