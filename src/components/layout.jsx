@@ -2,6 +2,9 @@ import { useState } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import { contact } from '../data/profile'
 
+import Divider from './Divider'
+import BackToTop from './BackToTop'
+
 const links = [
   { to: '/projects', label: 'Projects' },
   { to: '/core', label: 'The core' },
